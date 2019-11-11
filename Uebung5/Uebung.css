@@ -1,2 +1,218 @@
-body, html { color: white; height:100%; font-family:sans-serif; }
+html,body {
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    text-transform: capitalize;
+}
+nav.logo{
+    background-color:lightsalmon;
+}
+nav.navi
+{
 
+    background-color: lightskyblue;
+    grid-area: main-navi;
+
+}
+
+.info1
+{
+
+    background-color: lightpink;
+    grid-area: info1;
+
+
+}
+
+.info2{
+
+
+    background-color: lightcoral;
+    grid-area: info2;
+
+
+}
+
+main
+{
+
+    background-color: lightblue;
+    grid-area: main-content;
+
+
+
+}
+
+nav.sub
+{
+
+    background-color: lightgreen;
+    grid-area: sub-navi;
+}
+
+footer
+{
+
+    background-color: lightseagreen;
+    grid-area: footer;
+}
+
+
+
+
+/*---------------MOBILE ANSICHT----------------*/
+@media screen and (max-width:767px)
+{
+    .container{
+        display: grid;
+        justify-content: center;
+        grid-template-rows: 1fr 1fr 1fr 1fr 100% 1fr 1fr;
+        grid-template-areas:
+                "logo"
+                "main-navi"
+                "info1"
+                "info2"
+                "main-content"
+                "sub-navi"
+                "footer";
+    }
+}
+/*------------------TABLET------------------*/
+
+@media screen and (min-width:768px) and (max-width:991px)
+{
+
+
+    .container {
+
+
+        display: grid;
+        grid-template-columns: 300px auto;
+        grid-template-rows: 60px 70px 60px 60px auto 70px 55px;
+        grid-template-areas:
+                "logo main-navi"
+                "content content"
+                "sub-nav sub-nav"
+                "footer footer";
+
+
+    }
+}
+
+/*------------------SMALL DESKTOP------------------*/
+
+@media screen and (min-width:992px) and (max-width:1199px)
+{
+    .container{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 300px 600px;
+        grid-template-rows: 70px auto 55px;
+        grid-template-areas:
+                "logo main-nav"
+                "content content"
+                "sub-nav sub-nav"
+                "footer footer";
+    }
+}
+
+/*------------------NORM. DESKTOPANSICHT------------------*/
+
+@media screen and (min-width:1200px)
+{
+    .container{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 300px 900px;
+        grid-template-rows: 70px auto 55px;
+        grid-template-areas:
+                "logo main-nav"
+                "content content"
+                "sub-nav sub-nav"
+                "footer footer";
+    }
+}
+
+
+
+
+/*------------------SMARTPHONE MIT INFOBOXEN------------------*/
+
+@media screen and (max-width:767px)
+{
+    .container{
+        display: grid;
+        justify-content: center;
+
+        grid-template-rows: 60px 70px 70px 70px auto 70px 55px;
+        grid-template-areas:
+                "logo"
+                "main-nav"
+                "info1"
+                "info2"
+                "content"
+                "sub-nav"
+                "footer";
+    }
+}
+
+/*------------------TABLET MIT INFOBOXEN------------------*/
+
+
+@media screen and (min-width:768px) and (max-width:991px)
+{
+    .container{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 150px auto;
+
+        grid-template-rows: 60px 70px auto 70px 55px;
+        grid-template-areas:
+                "logo main-nav"
+                "info1 info2"
+                "content content"
+                "sub-nav sub-nav"
+                "footer footer";
+    }
+}
+
+/*------------------SMALL DEKTOP MIT INFOBOXEN------------------*/
+
+@media screen and (min-width:992px) and (max-width:1199px)
+{
+    .container{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 12.5em 31.250em 25em;
+
+        grid-template-rows: 60px 70px auto 300px 100px;
+        grid-template-areas:
+                "logo main-nav main-nav"
+                "sub-nav info1 info2"
+                "sub-nav content content"
+                "sub-nav content content"
+                "footer footer footer";
+    }
+}
+
+
+/*------------------NORM. DESKTOP MIT INFOBOXEN------------------*/
+
+@media screen and (min-width:1200px)
+{
+    .container{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 300px 500px 400px;
+
+        grid-template-rows: 60px 70px auto 300px 100px;
+        grid-template-areas:
+                "logo main-nav main-nav"
+                "sub-nav content info1"
+                "sub-nav content info1"
+                "sub-nav content info2"
+                "footer footer info2";
+    }
+}
