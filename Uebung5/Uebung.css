@@ -5,15 +5,22 @@ html,body {
     font-size: 40px;
     text-align: center;
     text-transform: capitalize;
+    margin: 0;
 }
 nav.logo{
     background-color:lightsalmon;
+    grid-area: logo;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
-nav.navi
+nav.main-navi
 {
 
     background-color: lightskyblue;
     grid-area: main-navi;
+    padding-top: 40px;
+    padding-inline: 10%;
+    padding-bottom: 40px;
 
 }
 
@@ -22,7 +29,8 @@ nav.navi
 
     background-color: lightpink;
     grid-area: info1;
-
+    padding-top: 40px;
+    padding-bottom: 40px;
 
 }
 
@@ -31,7 +39,8 @@ nav.navi
 
     background-color: lightcoral;
     grid-area: info2;
-
+    padding-top: 40px;
+    padding-bottom: 40px;
 
 }
 
@@ -40,8 +49,9 @@ main
 
     background-color: lightblue;
     grid-area: main-content;
-
-
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding: 100%;
 
 }
 
@@ -50,6 +60,8 @@ nav.sub
 
     background-color: lightgreen;
     grid-area: sub-navi;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 footer
@@ -57,6 +69,8 @@ footer
 
     background-color: lightseagreen;
     grid-area: footer;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 
@@ -89,12 +103,13 @@ footer
 
 
         display: grid;
-        grid-template-columns: 300px auto;
-        grid-template-rows: 60px 70px 60px 60px auto 70px 55px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 60px 70px 60px  auto 70px 55px;
         grid-template-areas:
                 "logo main-navi"
-                "content content"
-                "sub-nav sub-nav"
+                "info1 info2"
+                "main-content main-content"
+                "sub-navi sub-navi"
                 "footer footer";
 
 
@@ -111,9 +126,9 @@ footer
         grid-template-columns: 300px 600px;
         grid-template-rows: 70px auto 55px;
         grid-template-areas:
-                "logo main-nav"
-                "content content"
-                "sub-nav sub-nav"
+                "logo main-navi"
+                "main-content main-content"
+                "sub-navi sub-navi"
                 "footer footer";
     }
 }
@@ -128,9 +143,9 @@ footer
         grid-template-columns: 300px 900px;
         grid-template-rows: 70px auto 55px;
         grid-template-areas:
-                "logo main-nav"
-                "content content"
-                "sub-nav sub-nav"
+                "logo main-navi main-navi"
+                "sub-navi info1 info 2"
+                "sub-nav main-content"
                 "footer footer";
     }
 }
@@ -210,9 +225,9 @@ footer
         grid-template-rows: 60px 70px auto 300px 100px;
         grid-template-areas:
                 "logo main-nav main-nav"
-                "sub-nav content info1"
-                "sub-nav content info1"
-                "sub-nav content info2"
+                "sub-nav main-content info1"
+                "sub-nav main-content info2"
+                "sub-nav main-content info2"
                 "footer footer info2";
     }
 }
